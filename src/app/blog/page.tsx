@@ -5,17 +5,25 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Page for Startup Nextjs Template",
-  // other metadata
+  title: "Tech Insights & Tutorials | Tech Yugantar Blog",
+  description:
+    "Stay ahead of the curve with Tech Yugantar. Explore our latest articles on Python, Django, Next.js, and mobile development trends to fuel your digital growth.",
+  keywords: ["Tech Blog", "Software Development Trends", "Python Tutorials", "Next.js Insights", "Tech Yugantar Articles"],
+  openGraph: {
+    title: "Tech Yugantar Blog - Digital Innovation Insights",
+    description: "Expert insights into software engineering and digital transformation.",
+    url: "https://techyugantar.in/blog",
+    siteName: "Tech Yugantar",
+    type: "website",
+  },
 };
 
 const Blog = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Blog Grid"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName="Tech Insights"
+        description="Deep dives into the world of software development, modern architecture, and the future of digital business. Knowledge shared by the Tech Yugantar team."
       />
 
       <section className="pt-[120px] pb-[120px]">
@@ -42,10 +50,11 @@ const Blog = () => {
                     Prev
                   </a>
                 </li>
+                {/* Active page style suggestion: you might want to add a 'bg-primary text-white' class to the current page */}
                 <li className="mx-1">
                   <a
                     href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
+                    className="bg-primary text-white flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition"
                   >
                     1
                   </a>
@@ -59,25 +68,9 @@ const Blog = () => {
                   </a>
                 </li>
                 <li className="mx-1">
-                  <a
-                    href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
-                  >
-                    3
-                  </a>
-                </li>
-                <li className="mx-1">
                   <span className="bg-body-color/15 text-body-color flex h-9 min-w-[36px] cursor-not-allowed items-center justify-center rounded-md px-4 text-sm">
                     ...
                   </span>
-                </li>
-                <li className="mx-1">
-                  <a
-                    href="#0"
-                    className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
-                  >
-                    12
-                  </a>
                 </li>
                 <li className="mx-1">
                   <a

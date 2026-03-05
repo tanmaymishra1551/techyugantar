@@ -147,7 +147,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/pricing"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Pricing
@@ -173,7 +173,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <Link
-                      href="/"
+                      href="/terms"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       TOS
@@ -181,20 +181,20 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/privacy"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Privacy Policy
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href="/"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Refund Policy
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>

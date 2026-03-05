@@ -3,9 +3,16 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sign In Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Sign In Page for Startup Nextjs Template",
-  // other metadata
+  title: "Sign In | Tech Yugantar Portal",
+  description: "Access your Tech Yugantar account to manage your projects, view insights, and collaborate with our technical team.",
+  keywords: ["Login", "Tech Yugantar Login", "Client Portal", "Software Project Management"],
+  openGraph: {
+    title: "Login to Tech Yugantar",
+    description: "Secure access to your digital transformation dashboard.",
+    url: "https://techyugantar.in/signin",
+    siteName: "Tech Yugantar",
+    type: "website",
+  },
 };
 
 const SigninPage = () => {

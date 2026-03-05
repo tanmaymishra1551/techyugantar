@@ -3,11 +3,16 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Error Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Error Page for Startup Nextjs Template",
-  // other metadata
+  title: "404 - Page Not Found | Tech Yugantar",
+  description: "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable. Return to Tech Yugantar to explore our technology solutions.",
+  // robots: { index: false, follow: true }, // Optional: tells search engines not to index the error page
+  openGraph: {
+    title: "404 - Something Went Wrong | Tech Yugantar",
+    description: "Oops! We couldn't find the page you were looking for.",
+    url: "https://techyugantar.in/404",
+    siteName: "Tech Yugantar",
+  },
 };
-
 const ErrorPage = () => {
   return (
     <>

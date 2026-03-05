@@ -3,11 +3,18 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Sign Up Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Sign Up Page for Startup Nextjs Template",
-  // other metadata
+  title: "Create an Account | Tech Yugantar",
+  description:
+    "Join Tech Yugantar to kickstart your digital journey. Create an account to collaborate on software projects and access our innovative technology solutions.",
+  keywords: ["Sign Up", "Tech Yugantar Registration", "Start Project", "Tech Partnership"],
+  openGraph: {
+    title: "Join Tech Yugantar - Empower Your Business",
+    description: "Register today and start building the future with our expert development team.",
+    url: "https://techyugantar.in/signup",
+    siteName: "Tech Yugantar",
+    type: "website",
+  },
 };
-
 const SignupPage = () => {
   return (
     <>

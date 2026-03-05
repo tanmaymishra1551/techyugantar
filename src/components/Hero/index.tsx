@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Typewriter from 'typewriter-effect';
 import TypewriterWrapper from "./TypewriterWrapper";
 import BlinkingEmoji from "./BlinkingEmoji";
 
