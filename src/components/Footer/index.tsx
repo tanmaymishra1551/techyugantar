@@ -26,10 +26,32 @@ const Footer = () => {
                     height={30}
                   />
                 </Link>
-                <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Integer lobortis.
-                </p>
+                <div className="mb-9">
+                  <h3 className="mb-2 text-lg font-bold text-black dark:text-white">
+                    Registered Office
+                  </h3>
+                  <p className="text-base leading-relaxed text-body-color dark:text-body-color-dark">
+                    Tech Yugantar <br />
+                    Varanasi, Uttar Pradesh (UP) <br />
+                    India — 221003
+                  </p>
+                  <div className="mt-4 flex items-center gap-2 text-sm font-medium text-primary">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    <span>Varanasi, India</span>
+                  </div>
+                </div>
                 <div className="flex items-center">
                   <a
                     href="/"
@@ -215,24 +237,19 @@ const Footer = () => {
           <div className="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">
-              Template by{" "}
+              © {new Date().getFullYear()}{" "}
               <a
-                href="http://uideck.com"
+                href="https://techyugantar.in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-primary"
+                className="font-semibold text-primary hover:underline"
               >
-                UIdeck
-              </a>{" "}
-              and{" "}
-              <a
-                href="https://nextjstemplates.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-primary"
-              >
-                Next.js Templates
+                Tech Yugantar
               </a>
+              . All rights reserved.
+            </p>
+            <p className="mt-2 text-center text-sm text-body-color/70 dark:text-white/60">
+              Crafting the next generation of software solutions.
             </p>
           </div>
         </div>
