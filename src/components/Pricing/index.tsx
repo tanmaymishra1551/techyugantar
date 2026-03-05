@@ -21,11 +21,10 @@ const Pricing = () => {
           <div className="mb-8 flex justify-center md:mb-12 lg:mb-16">
             <span
               onClick={() => setIsMonthly(true)}
-              className={`${
-                isMonthly
-                  ? "pointer-events-none text-primary"
-                  : "text-dark dark:text-white"
-              } mr-4 cursor-pointer text-base font-semibold`}
+              className={`${isMonthly
+                ? "pointer-events-none text-primary"
+                : "text-dark dark:text-white"
+                } mr-4 cursor-pointer text-base font-semibold`}
             >
               Monthly
             </span>
@@ -36,9 +35,8 @@ const Pricing = () => {
               <div className="relative">
                 <div className="h-5 w-14 rounded-full bg-[#1D2144] shadow-inner"></div>
                 <div
-                  className={`${
-                    isMonthly ? "" : "translate-x-full"
-                  } shadow-switch-1 absolute left-0 top-[-4px] flex h-7 w-7 items-center justify-center rounded-full bg-primary transition`}
+                  className={`${isMonthly ? "" : "translate-x-full"
+                    } shadow-switch-1 absolute left-0 top-[-4px] flex h-7 w-7 items-center justify-center rounded-full bg-primary transition`}
                 >
                   <span className="active h-4 w-4 rounded-full bg-white"></span>
                 </div>
@@ -46,11 +44,10 @@ const Pricing = () => {
             </div>
             <span
               onClick={() => setIsMonthly(false)}
-              className={`${
-                isMonthly
-                  ? "text-dark dark:text-white"
-                  : "pointer-events-none text-primary"
-              } ml-4 cursor-pointer text-base font-semibold`}
+              className={`${isMonthly
+                ? "text-dark dark:text-white"
+                : "pointer-events-none text-primary"
+                } ml-4 cursor-pointer text-base font-semibold`}
             >
               Yearly
             </span>
@@ -59,43 +56,48 @@ const Pricing = () => {
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
-            packageName="Lite"
-            price={isMonthly ? "40" : "120"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName="MVP / Startup"
+            price={isMonthly ? "25k" : "2.5L"}
+            duration={isMonthly ? "mo" : "init"}
+            subtitle="Perfect for testing your idea with a high-quality functional prototype."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Custom Django Backend" status="active" />
+            <OfferList text="Next.js Frontend (3-5 Pages)" status="active" />
+            <OfferList text="Essential API Integration" status="active" />
+            <OfferList text="Basic Database Setup" status="active" />
+            <OfferList text="Cloud Deployment (Vercel/Heroku)" status="active" />
+            <OfferList text="Multi-tenant Support" status="inactive" />
+            <OfferList text="Priority 24/7 Support" status="inactive" />
           </PricingBox>
+
           <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName="Business Growth"
+            price={isMonthly ? "75k" : "7.5L"}
+            duration={isMonthly ? "mo" : "init"}
+            subtitle="Full-scale web application with advanced features and scaling."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
+            <OfferList text="Advanced Django & DRF" status="active" />
+            <OfferList text="Unlimited Next.js Pages" status="active" />
+            <OfferList text="Multi-tenant Architecture" status="active" />
+            <OfferList text="Payment Gateway Integration" status="active" />
+            <OfferList text="Postgres Data Isolation" status="active" />
+            <OfferList text="Dockerized Deployment" status="active" />
+            <OfferList text="SEO & Performance Optimization" status="active" />
           </PricingBox>
+
           <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            packageName="Enterprise"
+            price="Custom"
+            duration="Project"
+            subtitle="For complex ERP systems, large scale SaaS, and dedicated tech partnership."
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
+            <OfferList text="Full ERP-Level Complexity" status="active" />
+            <OfferList text="High-Concurrency Systems" status="active" />
+            <OfferList text="AI & LLM Integration" status="active" />
+            <OfferList text="Custom Multi-tenant SaaS" status="active" />
+            <OfferList text="Dedicated DevOps Support" status="active" />
+            <OfferList text="Security Audits & Pentesting" status="active" />
+            <OfferList text="Dedicated Account Manager" status="active" />
           </PricingBox>
         </div>
       </div>

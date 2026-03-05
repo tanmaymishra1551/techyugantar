@@ -10,15 +10,16 @@ const AboutSectionTwo = () => {
               className="relative mx-auto mb-12 aspect-25/24 max-w-[500px] text-center lg:m-0"
               data-wow-delay=".15s"
             >
+              {/* Keep these images or replace them with a Tech Stack illustration */}
               <Image
                 src="/images/about/about-image-2.svg"
-                alt="about image"
+                alt="Tech Yugantar Solutions"
                 fill
                 className="drop-shadow-three dark:hidden dark:drop-shadow-none"
               />
               <Image
                 src="/images/about/about-image-2-dark.svg"
-                alt="about image"
+                alt="Tech Yugantar Solutions"
                 fill
                 className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
               />
@@ -28,29 +29,32 @@ const AboutSectionTwo = () => {
             <div className="max-w-[470px]">
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Bug free code
+                  Scalable Python & Django Backends
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  We architect robust server-side applications using Django and DRF, 
+                  ensuring your data is secure, your APIs are fast, and your 
+                  business logic is flawlessly executed.
                 </p>
               </div>
               <div className="mb-9">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Premier support
+                  High-Performance Frontend
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt.
+                  Using Next.js and React, we build SEO-optimized, lightning-fast 
+                  web interfaces. We focus on Core Web Vitals to ensure 
+                  Tech Yugantar products deliver the best user experience.
                 </p>
               </div>
               <div className="mb-1">
                 <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Next.js
+                  Agile Development & Support
                 </h3>
                 <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt
-                  consectetur adipiscing elit setim.
+                  From Varanasi to the world, we provide end-to-end support and 
+                  agile iterations. We don't just write code; we partner with 
+                  you to evolve your software as your business grows.
                 </p>
               </div>
             </div>
