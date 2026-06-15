@@ -1,12 +1,35 @@
 "use client";
 
-import VideoModal from "@/components/video-modal";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import SectionTitle from "../Common/SectionTitle";
 
 export default function Video() {
   const [isOpen, setOpen] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const VIDEO_URL =
+    "https://firebasestorage.googleapis.com/v0/b/rewardhub-35c65.firebasestorage.app/o/videos%2FIMG_0651.MP4?alt=media&token=9f3a0eda-0898-46a9-82d0-a21ded37ff2a";
+
+  // Optional: your thumbnail — replace with your actual path
+  const THUMBNAIL = "/images/video/image.png";
+
+  // Pause & reset when modal closes
+  useEffect(() => {
+    if (!isOpen && videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
+    }
+  }, [isOpen]);
+
+  // Close on Escape key
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    if (isOpen) window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [isOpen]);
 
   return (
     <>
@@ -19,18 +42,22 @@ export default function Video() {
             mb="80px"
           />
         </div>
+
         <div className="relative overflow-hidden">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[770px] overflow-hidden rounded-md">
                 <div className="relative aspect-77/40 items-center justify-center">
+                  {/* Thumbnail */}
                   <Image
-                    src="/images/video/image.png"
-                    alt="video image"
+                    src={THUMBNAIL}
+                    alt="video thumbnail"
                     className="object-cover"
                     fill
                   />
-                  <div className="absolute top-0 right-0 flex h-full w-full items-center justify-center">
+
+                  {/* Play button overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center">
                     <button
                       aria-label="video play button"
                       onClick={() => setOpen(true)}
@@ -51,19 +78,48 @@ export default function Video() {
             </div>
           </div>
 
-          <div className="absolute right-0 bottom-0 left-0 z-[-1] h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat">
-            {/* <div className="absolute bottom-0 left-0 right-0 z-[-1] "> */}
-            {/* <img src="/images/video/shape.svg" alt="shape" className="w-full" /> */}
-          </div>
+          <div className="absolute right-0 bottom-0 left-0 z-[-1] h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat" />
         </div>
       </section>
 
-      <VideoModal
-        isOpen={isOpen}
-        onClose={() => setOpen(false)}
-        channel="youtube"
-        videoId="L61p2uyiMSo"
-      />
+      {/* Video Modal */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-4xl rounded-lg overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setOpen(false)}
+              aria-label="Close video"
+              className="absolute top-3 right-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-black/60 text-white hover:bg-black transition cursor-pointer"
+            >
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path
+                  d="M1 1L13 13M13 1L1 13"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
+
+            {/* Native video player */}
+            <video
+              ref={videoRef}
+              src={VIDEO_URL}
+              controls
+              autoPlay
+              className="w-full max-h-[80vh] bg-black"
+              playsInline
+            />
+          </div>
+        </div>
+      )}
     </>
   );
-};
+}
