@@ -13,22 +13,23 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://techyugantar.in"),
   title: {
-    default: "Tech Yugantar | Software Solutions",
+    default: "Tech Yugantar | Software Development Company in Varanasi",
     template: "%s | Tech Yugantar",
   },
   description:
-    "Tech Yugantar delivers end-to-end software solutions — Android, iOS & Web apps. From startups to enterprise-level businesses. Custom apps, ERP, SaaS & more. Based in Varanasi, India.",
+    "Tech Yugantar is a software development company in Varanasi building Android, iOS, and web apps for startups and enterprise businesses. Flutter, Django, React & custom ERP development.",
   keywords: [
     "Tech Yugantar",
-    "software development company India",
+    "software development company in Varanasi",
+    "software company Varanasi",
     "android app development Varanasi",
-    "ios app development",
-    "web development company",
+    "ios app development Varanasi",
+    "web development company Varanasi",
     "startup software solutions",
     "enterprise software India",
     "custom software development",
-    "flutter app development",
-    "react development",
+    "flutter app development company",
+    "react development company",
     "django backend development",
     "ERP software India",
   ],
@@ -39,9 +40,9 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://techyugantar.in",
     siteName: "Tech Yugantar",
-    title: "Tech Yugantar | Software Solutions",
+    title: "Tech Yugantar | Software Development Company in Varanasi",
     description:
-      "Android · iOS · Web development for startups to enterprise-level businesses. Based in Varanasi, India.",
+      "Android, iOS & web development for startups and enterprise businesses. Based in Varanasi, India — Flutter, Django, React & custom ERP.",
     images: [
       {
         url: "/og-image.png",
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tech Yugantar | Software Solutions",
+    title: "Tech Yugantar | Software Development Company in Varanasi",
     description:
       "Android · iOS · Web — startup to enterprise. Based in Varanasi, India.",
     images: ["/og-image.png"],

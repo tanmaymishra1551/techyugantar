@@ -5,17 +5,41 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Us | Tech Yugantar - Pioneering Digital Transformation",
+  title: "About Us — Software Development Company in Varanasi, India",
   description:
-    "Learn about Tech Yugantar's mission to bridge the gap between complex technology and seamless business solutions. We specialize in Python, Django, Flutter, and Next.js development.",
-  keywords: ["Tech Yugantar", "Software Development", "Web Development", "Mobile Apps", "Digital Transformation"],
-  // Add OpenGraph for better social sharing
+    "Tech Yugantar is a Varanasi-based software development company building Android, iOS, and web applications for startups and enterprises. Learn about our team, approach, and the technologies we work with.",
+  keywords: [
+    "about Tech Yugantar",
+    "software company Varanasi about",
+    "software development team Varanasi",
+    "tech company Uttar Pradesh",
+  ],
+  alternates: {
+    canonical: "https://techyugantar.in/about",
+  },
   openGraph: {
-    title: "About Tech Yugantar",
-    description: "Driving the next era of technological innovation.",
+    type: "website",
+    locale: "en_IN",
     url: "https://techyugantar.in/about",
     siteName: "Tech Yugantar",
-    type: "website",
+    title: "About Tech Yugantar — Software Company in Varanasi",
+    description:
+      "Learn about Tech Yugantar, a Varanasi-based software development company serving startups to enterprise businesses.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "About Tech Yugantar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Tech Yugantar — Software Company in Varanasi",
+    description:
+      "A Varanasi-based software development company serving startups to enterprises.",
+    images: ["/og-image.png"],
   },
 };
 
