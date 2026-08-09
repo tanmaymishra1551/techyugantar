@@ -1,5 +1,6 @@
 import { Feature } from "@/types/feature";
-import { SiDjango, SiReact, SiFastapi, SiFlutter, SiOpenai,SiIcloud } from "react-icons/si";
+import { SiDjango, SiReact, SiFastapi, SiFlutter, SiIcloud } from "react-icons/si";
+import { HiSparkles } from "react-icons/hi2";
 
 const featuresData: Feature[] = [
   {
@@ -41,7 +42,7 @@ const featuresData: Feature[] = [
   {
     id: 5,
     icon: (
-      <SiOpenai size={35} className="fill-current" />
+      <HiSparkles size={35} className="fill-current" />
     ),
     title: "AI & LLM Integration",
     paragraph:

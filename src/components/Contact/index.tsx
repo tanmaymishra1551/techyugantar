@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import NewsLatterBox from "./NewsLatterBox";
+import { Reveal } from "@/components/motion";
 
 const Contact = () => {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -35,7 +36,7 @@ const Contact = () => {
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
+          <Reveal className="w-full px-4 lg:w-7/12 xl:w-8/12">
             <div className="mb-12 rounded-xs bg-white px-8 py-11 shadow-three dark:bg-gray-dark sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]">
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
                 Need Help? Open a Ticket
@@ -145,11 +146,11 @@ const Contact = () => {
                 </form>
               )}
             </div>
-          </div>
+          </Reveal>
 
-          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
+          <Reveal delay={0.1} className="w-full px-4 lg:w-5/12 xl:w-4/12">
             <NewsLatterBox />
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

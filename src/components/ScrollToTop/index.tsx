@@ -1,16 +1,18 @@
 "use client"
 import { useEffect, useState } from "react";
+import { useLenis } from "lenis/react";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  const lenis = useLenis();
 
   // Top: 0 takes us all the way back to the top of the page
-  // Behavior: smooth keeps it smooth!
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    if (lenis) {
+      lenis.scrollTo(0, { duration: 1.2 });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   useEffect(() => {

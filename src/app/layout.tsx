@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
+import "lenis/dist/lenis.css";
 import "../styles/index.css";
 
 const inter = Inter({ subsets: ["latin"] });

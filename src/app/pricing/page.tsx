@@ -4,14 +4,24 @@ import Pricing from "@/components/Pricing";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Tech Yugantar - Start Your Project",
+  title: "Engagement Models & Pricing | Tech Yugantar",
   description:
-    "Get in touch with Tech Yugantar for custom software development, mobile apps, and web solutions. Let's discuss how we can bring your digital vision to life.",
-  keywords: ["Contact Tech Yugantar", "Software Consultation", "Hire Developers", "Tech Support India"],
+    "How Tech Yugantar structures software projects — Fixed Price, Time & Material, or Dedicated Team. Custom ERP, web, and mobile development scoped to your project, not a public price list.",
+  keywords: [
+    "software development pricing India",
+    "fixed price development",
+    "dedicated development team",
+    "time and material engagement",
+    "custom software quote Varanasi",
+  ],
+  alternates: {
+    canonical: "https://techyugantar.in/pricing",
+  },
   openGraph: {
-    title: "Connect with Tech Yugantar",
-    description: "Ready to scale your business? Contact our expert team today.",
-    url: "https://techyugantar.in/contact",
+    title: "Engagement Models & Pricing | Tech Yugantar",
+    description:
+      "Fixed Price, Time & Material, or Dedicated Team — pick how you want to engage, then get a custom quote.",
+    url: "https://techyugantar.in/pricing",
     siteName: "Tech Yugantar",
     type: "website",
   },
@@ -21,8 +31,8 @@ const PricingPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Pricing"
-        description="Have a groundbreaking idea or a complex technical challenge? Reach out to us. Our team is ready to provide the expertise and support you need to succeed."
+        pageName="Engagement Models"
+        description="Custom software rarely fits a public price list. Here's how we structure projects at Tech Yugantar — pick the model that fits, then get a custom quote for your project."
       />
       <Pricing />
     </>
