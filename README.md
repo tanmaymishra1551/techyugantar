@@ -1,81 +1,54 @@
-# Startup - Free Next.js Startup Website Template
+# Tech Yugantar — Official Web Platform
 
-Startup is a free, open-source, and premium-quality [**Next.js startup website template**](https://nextjstemplates.com/templates/startup) that comes with everything you need to launch a startup, business, or SaaS website, including all essential sections, components, and pages.
+[![Tech Yugantar](https://img.shields.io/badge/Website-techyugantar.in-blue)](https://techyugantar.in)
+[![Next.js](https://img.shields.io/badge/Next.js-15%2B%20%2F%2016-black?logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue?logo=typescript)](https://www.typescriptlang.org/)
 
-If you're looking for a high-quality and visually appealing, feature-rich Next.js Template for your next startup, SaaS, or business website, this is the perfect choice and starting point for you!
+The official corporate web application and product showcase for **Tech Yugantar**, built on **Next.js**, **Tailwind CSS**, and **TypeScript**.
 
-### ✨ Key Features
+---
 
-- Crafted for Startup and SaaS Business
-- Next.js and Tailwind CSS
-- All Essential Business Sections and Pages
-- High-quality and Clean Design
-- Dark and Light Version
-- TypeScript Support
-and Much More ...
+## 🚀 About Tech Yugantar
 
-### 🙌 Detailed comparison between the Free and Pro versions of Startup
+**Tech Yugantar** is an independent technology platform and digital innovation studio dedicated to building high-performance web systems, scalable enterprise applications, utility tools, and mobile ecosystems.
 
-| Feature             | Free | Pro |
-|---------------------|------------|----------|
-| Next.js Landing Page             | ✅ Yes      | ✅ Yes      |
-| All The Integrations - Auth, DB, Payments, Blog and many more ...             | ❌ No      | ✅ Yes |
-| Homepage Variations             | 1      | 2 |
-| Additional SaaS Pages and Components             | ❌ No      | ✅ Yes |
-| Functional Blog with Sanity       | ❌ No      | ✅ Yes |
-| Use with Commercial Projects            | ✅ Yes      | ✅ Yes      |
-| Lifetime Free Updates             | ✅ Yes      | ✅ Yes |
-| Email Support       | ❌ No         | ✅ Yes       |
-| Community Support         | ✅ Yes         | ✅ Yes       |
+- 🌐 **Website:** [https://techyugantar.in](https://techyugantar.in)
+- ✉️ **Inquiries & Support:** [info@techyugantar.com](mailto:info@techyugantar.com)
 
-### [🔥 Get Startup Pro](https://nextjstemplates.com/templates/saas-starter-startup)
+---
 
-[![Startup Pro](https://raw.githubusercontent.com/NextJSTemplates/startup-nextjs/main/startup-pro.webp)](https://nextjstemplates.com/templates/saas-starter-startup)
+## ✨ Features & Architecture
 
-Startup Pro - Expertly crafted for fully-functional, high-performing SaaS startup websites. Comes with with Authentication, Database, Blog, and all the essential integrations necessary for SaaS business sites.
+- **Next.js (App Router):** Fast SSR/SSG rendering, SEO-optimized routing, and responsive server components.
+- **Tailwind CSS v4:** Modern styling system with fluid typography and dynamic responsiveness.
+- **Dark / Light Mode:** Built-in theme switching with persistent client preferences.
+- **Product Ecosystem Showcase:** Highlights native mobile apps, AI utility tools, enterprise solutions, and client case studies.
+- **Optimized Performance:** Clean asset pipelines, minimal runtime overhead, and high Lighthouse scores.
+- **SEO & Social Graph Ready:** Automated OpenGraph meta tags, canonical links, and sitemap generation.
 
-- [🚀 View Free Demo](https://startup.nextjstemplates.com/)
+---
 
-- [🚀 View Pro Demo](https://startup-pro.nextjstemplates.com/)
+## 🛠️ Tech Stack
 
-- [📦 Download](https://nextjstemplates.com/templates/startup)
+| Layer | Technologies |
+|---|---|
+| **Framework** | Next.js (TypeScript) |
+| **Styling** | Tailwind CSS v4, Lucide Icons |
+| **State & UI** | React Hooks, Context API |
+| **Deployment** | Vercel / Node.js Standalone / Self-Hosted VPS |
 
-- [🔥 Get Pro](https://nextjstemplates.com/templates/saas-starter-startup)
+---
 
-- [🔌 Documentation](https://nextjstemplates.com/docs)
+## 💻 Getting Started
 
-### ⚡ Deploy Now
+### Prerequisites
+- **Node.js**: `v18.18.0` or higher
+- **Package Manager**: `npm`, `pnpm`, or `yarn`
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNextJSTemplates%2Fstartup-nextjs)
+### Installation
 
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/NextJSTemplates/startup-nextjs)
-
-### 📄 License
-
-Startup is 100% free and open-source, feel free to use with your personal and commercial projects.
-
-### 💜 Support
-
-If you like the template, please star this repository to inspire the team to create more stuff like this and reach more users like you!
-
-### ✨ Explore and Download - Free [Next.js Templates](https://nextjstemplates.com)
-
-### Update Log
-
-**03 December 2025**
-
-- Upgrade to Next.js 16
-- Fixed video modal issue
-
-**10 April 2025**
-
-- Fix peer deps issue with Next.js 15
-- Upgrade to tailwind v4
-- Refactored blog cards for handling edge cases(text ellipsis on bio, keeping author details at the bottom etc.)
-- Re-wrote blog details page with icons separation, fallback author image and better markup.
-- Fixed duplicate key errors on homepage.
-- Separated icons on theme-switcher button, and refactored scroll-to-top button.
-
-**29 Jan 2025**
-
-- Upgraded to Next.js 15
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/techyugantar-web.git](https://github.com/your-username/techyugantar-web.git)
+   cd techyugantar-web
