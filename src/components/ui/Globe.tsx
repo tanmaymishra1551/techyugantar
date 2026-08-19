@@ -48,9 +48,9 @@ export default function Globe({ className, size = 480 }: GlobeProps) {
       diffuse: 1.6,
       mapSamples: 16000,
       mapBrightness: 9,
-      baseColor: [0.45, 0.5, 0.8],
-      markerColor: [74 / 255, 108 / 255, 247 / 255],
-      glowColor: [0.25, 0.35, 0.9],
+      baseColor: [0.4, 0.55, 0.55],
+      markerColor: [57 / 255, 157 / 255, 145 / 255],
+      glowColor: [0.3, 0.65, 0.6],
       markers: MARKERS,
       onRender: (state) => {
         if (pointerInteracting.current === null && !prefersReducedMotion) {
@@ -83,7 +83,7 @@ export default function Globe({ className, size = 480 }: GlobeProps) {
     <div className={cx("relative", className)} style={{ width: size, maxWidth: "100%", aspectRatio: "1 / 1" }}>
       <div
         className="pointer-events-none absolute inset-0 rounded-full opacity-70 blur-3xl"
-        style={{ background: "radial-gradient(circle, rgba(74,108,247,0.35), transparent 65%)" }}
+        style={{ background: "radial-gradient(circle, rgba(57,157,145,0.35), transparent 65%)" }}
       />
       <canvas
         ref={canvasRef}

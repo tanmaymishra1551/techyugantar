@@ -1,9 +1,19 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 const NewsLatterBox = () => {
   const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  // Server has no access to the saved theme, but next-themes resolves it
+  // synchronously on the client's first render — branching on `theme` before
+  // mount makes the SSR and client markup disagree. Fall back to the
+  // server's answer (dark) until mounted, then let it re-render normally.
+  const isLight = mounted && theme === "light";
 
   return (
     <div className="shadow-three dark:bg-gray-dark relative z-10 rounded-xs bg-white p-8 sm:p-11 lg:p-8 xl:p-11">
@@ -61,12 +71,12 @@ const NewsLatterBox = () => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={isLight ? "#399D91" : "#fff"}
                   stopOpacity="0.62"
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={isLight ? "#399D91" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>
@@ -97,12 +107,12 @@ const NewsLatterBox = () => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={isLight ? "#399D91" : "#fff"}
                   stopOpacity="0.62"
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={isLight ? "#399D91" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>
@@ -133,12 +143,12 @@ const NewsLatterBox = () => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={isLight ? "#399D91" : "#fff"}
                   stopOpacity="0.62"
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={isLight ? "#399D91" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>
@@ -187,11 +197,11 @@ const NewsLatterBox = () => {
               >
                 <stop
                   offset="0.328125"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={isLight ? "#399D91" : "#fff"}
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={isLight ? "#399D91" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>
@@ -205,11 +215,11 @@ const NewsLatterBox = () => {
               >
                 <stop
                   offset="0.328125"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={isLight ? "#399D91" : "#fff"}
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={isLight ? "#399D91" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>
@@ -223,11 +233,11 @@ const NewsLatterBox = () => {
               >
                 <stop
                   offset="0.328125"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={isLight ? "#399D91" : "#fff"}
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={isLight ? "#399D91" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>
@@ -241,11 +251,11 @@ const NewsLatterBox = () => {
               >
                 <stop
                   offset="0.328125"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={isLight ? "#399D91" : "#fff"}
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={isLight ? "#399D91" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>
