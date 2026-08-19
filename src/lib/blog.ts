@@ -9,38 +9,45 @@ export type BlogMeta = {
   title: string;
   excerpt: string;
   author: string;
-  authorImage: string;
   date: string;
   tags: string[];
   image: string;
-  views: number;
-  comments: number;
+  /** Minutes, derived from word count — never a stored/fabricated figure. */
+  readingTime: number;
 };
 
 export type Blog = BlogMeta & {
   content: string;
 };
 
-// Get all blog slugs (used for generateStaticParams)
+function readingTimeFor(content: string): number {
+  const words = content.trim().split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(words / 200));
+}
+
 export function getAllSlugs(): string[] {
   return fs.readdirSync(blogsDir).map((file) => file.replace(/\.md$/, ""));
 }
 
-// Get all blogs metadata (used for blog listing page)
 export function getAllBlogs(): BlogMeta[] {
-  const files = fs.readdirSync(blogsDir);
-  return files.map((file) => {
-    const slug = file.replace(/\.md$/, "");
-    const raw = fs.readFileSync(path.join(blogsDir, file), "utf8");
-    const { data } = matter(raw);
-    return { slug, ...data } as BlogMeta;
-  });
+  return getAllSlugs()
+    .map((slug) => {
+      const raw = fs.readFileSync(path.join(blogsDir, `${slug}.md`), "utf8");
+      const { data, content } = matter(raw);
+      return { slug, ...data, readingTime: readingTimeFor(content) } as BlogMeta;
+    })
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-// Get a single blog by slug (used for detail page)
 export function getBlogBySlug(slug: string): Blog {
-  const filePath = path.join(blogsDir, `${slug}.md`);
-  const raw = fs.readFileSync(filePath, "utf8");
+  const raw = fs.readFileSync(path.join(blogsDir, `${slug}.md`), "utf8");
   const { data, content } = matter(raw);
-  return { slug, content, ...data } as Blog;
+  return { slug, content, ...data, readingTime: readingTimeFor(content) } as Blog;
+}
+
+export function getRelatedBlogs(current: BlogMeta, limit = 3): BlogMeta[] {
+  return getAllBlogs()
+    .filter((post) => post.slug !== current.slug)
+    .filter((post) => post.tags.some((tag) => current.tags.includes(tag)))
+    .slice(0, limit);
 }

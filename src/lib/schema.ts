@@ -25,6 +25,30 @@ export function buildServiceSchema(services: { name: string; description: string
   }));
 }
 
+export function buildArticleSchema(article: {
+  title: string;
+  description: string;
+  slug: string;
+  image: string;
+  author: string;
+  datePublished: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: article.title,
+    description: article.description,
+    image: `${SITE_URL}${article.image}`,
+    datePublished: article.datePublished,
+    author: {
+      "@type": "Organization",
+      name: article.author,
+    },
+    publisher: { "@id": ORG_ID },
+    mainEntityOfPage: `${SITE_URL}/blog/${article.slug}`,
+  };
+}
+
 export function buildFaqSchema(faqs: { question: string; answer: string }[]) {
   return {
     "@context": "https://schema.org",
