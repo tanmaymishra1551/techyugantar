@@ -12,13 +12,13 @@ const Contact = () => {
     setStatus("sending");
 
     const form = e.currentTarget;
-    const data = new FormData(form);
+    const data = Object.fromEntries(new FormData(form).entries());
 
     try {
-      const res = await fetch("/", {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(data as any).toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       });
 
       if (res.ok) {
@@ -60,16 +60,7 @@ const Contact = () => {
               )}
 
               {status !== "success" && (
-                <form
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
-                  netlify-honeypot="bot-field"
-                  onSubmit={handleSubmit}
-                >
-                  {/* Required hidden fields for Netlify */}
-                  <input type="hidden" name="form-name" value="contact" />
-
+                <form onSubmit={handleSubmit}>
                   {/* Honeypot field — hidden from real users, catches bots */}
                   <div className="hidden">
                     <input name="bot-field" />

@@ -14,7 +14,7 @@ The official corporate web application and product showcase for **Tech Yugantar*
 **Tech Yugantar** is an independent technology platform and digital innovation studio dedicated to building high-performance web systems, scalable enterprise applications, utility tools, and mobile ecosystems.
 
 - 🌐 **Website:** [https://techyugantar.in](https://techyugantar.in)
-- ✉️ **Inquiries & Support:** [info@techyugantar.com](mailto:info@techyugantar.com)
+- ✉️ **Inquiries & Support:** [info@techyugantar.in](mailto:info@techyugantar.in)
 
 ---
 

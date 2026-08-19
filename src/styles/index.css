@@ -17,17 +17,33 @@ layer(base);
   --color-current: currentColor;
   --color-transparent: transparent;
   --color-white: #ffffff;
-  --color-black: #121723;
-  --color-dark: #1d2430;
   --color-primary: #4a6cf7;
   --color-yellow: #fbb040;
-  --color-bg-color-dark: #171c28;
+
+  /* True zinc obsidian scale — dark-mode surface hierarchy */
+  --color-zinc-50: #fafafa;
+  --color-zinc-100: #f4f4f5;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-500: #71717a;
+  --color-zinc-600: #52525b;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-800: #27272a;
+  --color-zinc-900: #18181b;
+  --color-zinc-950: #09090b;
+
+  /* black/dark/gray-dark = elevation ladder: page bg -> card surface -> raised surface */
+  --color-black: #09090b;
+  --color-gray-dark: #18181b;
+  --color-dark: #27272a;
+  --color-bg-color-dark: #09090b;
 
   --color-body-color: #788293;
-  --color-body-color-dark: #959cb1;
+  --color-body-color-dark: #a1a1aa;
 
   --color-stroke-stroke: #e3e8ef;
-  --color-stroke-dark: #353943;
+  --color-stroke-dark: #27272a;
 
   --color-gray-50: #f9fafb;
   --color-gray-100: #f3f4f6;
@@ -40,7 +56,6 @@ layer(base);
   --color-gray-800: #1f2937;
   --color-gray-900: #111827;
   --color-gray-950: #030712;
-  --color-gray-dark: #1e232e;
   --color-gray-light: #f0f2f9;
 
   --shadow-sign-up: 0px 5px 10px rgba(4, 10, 34, 0.2);
