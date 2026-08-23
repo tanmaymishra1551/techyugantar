@@ -46,7 +46,7 @@ export const metadata: Metadata = {
       "Android, iOS & web development for startups and enterprise businesses. Based in Varanasi, India — Flutter, Django, React & custom ERP.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Tech Yugantar Software Solutions",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "Tech Yugantar | Software Development Company in Varanasi",
     description:
       "Android · iOS · Web — startup to enterprise. Based in Varanasi, India.",
-    images: ["/og-image.png"],
+    images: ["/og-image.webp"],
   },
   robots: {
     index: true,
