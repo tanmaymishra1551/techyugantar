@@ -52,7 +52,6 @@ export default function Home() {
       <AboutSectionTwo />
       <Trust />
       <Pricing />
-      {/* <Blog /> */}
       <Contact />
     </>
   );
